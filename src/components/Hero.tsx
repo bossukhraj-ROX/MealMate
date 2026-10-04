@@ -1,6 +1,12 @@
 import { ArrowRight, Sparkles } from 'lucide-react'
 
 export default function Hero() {
+  const goToCheckout = () => {
+    const link = import.meta.env.VITE_STRIPE_PAYMENT_LINK_URL
+    if (link) {
+      window.location.href = link
+    }
+  }
   return (
     <section id="top" className="relative overflow-hidden bg-ivory pt-28 pb-16 lg:pt-40 lg:pb-24">
       {/* Decorative background shapes */}
@@ -26,17 +32,13 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <a
-              href="#pricing"
-              onClick={(e) => {
-                e.preventDefault()
-                document.querySelector('#pricing')?.scrollIntoView({ behavior: 'smooth' })
-              }}
+            <button
+              onClick={goToCheckout}
               className="btn-primary text-lg"
             >
               Get my meal plan — £3.99
               <ArrowRight size={20} />
-            </a>
+            </button>
             <a
               href="#how-it-works"
               onClick={(e) => {

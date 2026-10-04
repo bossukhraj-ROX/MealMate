@@ -13,9 +13,11 @@ const included = [
 export default function Pricing() {
   const { ref, isVisible } = useScrollReveal()
 
-  const scrollToCheckout = () => {
-    // Stripe not connected yet — scroll to FAQ for now
-    document.querySelector('#faq')?.scrollIntoView({ behavior: 'smooth' })
+  const goToCheckout = () => {
+    const link = import.meta.env.VITE_STRIPE_PAYMENT_LINK_URL
+    if (link) {
+      window.location.href = link
+    }
   }
 
   return (
@@ -54,7 +56,7 @@ export default function Pricing() {
             </p>
 
             <button
-              onClick={scrollToCheckout}
+              onClick={goToCheckout}
               className="btn-primary mt-8 w-full text-lg"
             >
               Get my meal plan — £3.99

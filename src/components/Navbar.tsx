@@ -24,6 +24,14 @@ export default function Navbar() {
     if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
 
+  const goToCheckout = () => {
+    setMobileOpen(false)
+    const link = import.meta.env.VITE_STRIPE_PAYMENT_LINK_URL
+    if (link) {
+      window.location.href = link
+    }
+  }
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -60,16 +68,12 @@ export default function Navbar() {
               {link.label}
             </button>
           ))}
-          <a
-            href="#pricing"
-            onClick={(e) => {
-              e.preventDefault()
-              handleNavClick('#pricing')
-            }}
+          <button
+            onClick={goToCheckout}
             className="rounded-full bg-forest-600 px-6 py-2.5 text-sm font-semibold text-ivory transition-all duration-300 hover:bg-forest-500 hover:shadow-lg"
           >
             Buy now — £3.99
-          </a>
+          </button>
         </div>
 
         {/* Mobile toggle */}
@@ -95,16 +99,12 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
-            <a
-              href="#pricing"
-              onClick={(e) => {
-                e.preventDefault()
-                handleNavClick('#pricing')
-              }}
+            <button
+              onClick={goToCheckout}
               className="mt-2 rounded-full bg-forest-600 px-6 py-3 text-center text-base font-semibold text-ivory"
             >
               Buy now — £3.99
-            </a>
+            </button>
           </div>
         </div>
       )}
