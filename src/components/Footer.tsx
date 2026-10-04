@@ -65,7 +65,7 @@ export default function Footer() {
                 <Mail size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/mealmateplan/"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-forest-700 text-forest-200 transition-all duration-300 hover:bg-forest-600 hover:text-ivory"
                 aria-label="MEALMATE on Instagram"
               >
