@@ -58,7 +58,7 @@ export default function Footer() {
             </h4>
             <div className="mt-4 flex gap-3">
               <a
-                href="mailto:mealmatesupportmms@gmail"
+                href="mailto:mealmatesupportmms@gmail.com"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-forest-700 text-forest-200 transition-all duration-300 hover:bg-forest-600 hover:text-ivory"
                 aria-label="Email MEALMATE"
               >
