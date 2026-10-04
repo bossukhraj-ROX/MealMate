@@ -1,4 +1,4 @@
-import { Leaf, Mail, Instagram, Twitter } from 'lucide-react'
+import { Leaf, Mail, Instagram } from 'lucide-react'
 
 const footerLinks = [
   { label: 'How it works', href: '#how-it-works' },
@@ -58,7 +58,7 @@ export default function Footer() {
             </h4>
             <div className="mt-4 flex gap-3">
               <a
-                href="mailto:hello@mealmate.co.uk"
+                href="mailto:mealmatesupportmms@gmail"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-forest-700 text-forest-200 transition-all duration-300 hover:bg-forest-600 hover:text-ivory"
                 aria-label="Email MEALMATE"
               >
@@ -71,16 +71,9 @@ export default function Footer() {
               >
                 <Instagram size={18} />
               </a>
-              <a
-                href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-forest-700 text-forest-200 transition-all duration-300 hover:bg-forest-600 hover:text-ivory"
-                aria-label="MEALMATE on Twitter"
-              >
-                <Twitter size={18} />
-              </a>
             </div>
             <p className="mt-4 text-xs text-forest-300">
-              hello@mealmate.co.uk
+              mealmatesupportmms@gmail.com
             </p>
           </div>
         </div>
