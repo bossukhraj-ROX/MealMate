@@ -1,7 +1,7 @@
 import { Leaf, Mail, Instagram } from 'lucide-react'
 
 const footerLinks = [
-  { label: 'How it works', href: '#how-it-works' },
+  { label: 'The product', href: '#showcase' },
   { label: "What's included", href: '#whats-included' },
   { label: 'Meal plan', href: '#meal-plan' },
   { label: 'FAQ', href: '#faq' },

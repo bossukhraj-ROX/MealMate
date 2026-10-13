@@ -6,7 +6,7 @@ const included = [
   'Shopping list organised by aisle',
   'Quantity calculator for 1–4 people',
   'Substitution guide',
-  'Ingredient reuse guide',
+  'Ingredient reuse map',
   'Kitchen essentials checklist',
 ]
 
@@ -21,19 +21,22 @@ export default function Pricing() {
   }
 
   return (
-    <section id="pricing" className="bg-ivory py-20 lg:py-28" ref={ref}>
-      <div className={`mx-auto max-w-7xl px-6 lg:px-10 reveal ${isVisible ? 'is-visible' : ''}`}>
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-forest-400">
+    <section id="pricing" className="relative overflow-hidden bg-forest-800 py-20 lg:py-28">
+      {/* Ambient glow */}
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -z-0 h-[400px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-lime-accent/5 blur-3xl" />
+
+      <div ref={ref} className={`relative mx-auto max-w-7xl px-6 lg:px-10 reveal ${isVisible ? 'is-visible' : ''}`}>
+        <div className="mx-auto mb-14 max-w-2xl text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-lime-accent">
             Pricing
           </p>
-          <h2 className="font-serif text-3xl font-bold leading-tight text-forest-700 sm:text-4xl lg:text-5xl">
+          <h2 className="font-serif text-3xl font-bold leading-tight text-ivory sm:text-4xl lg:text-5xl">
             One price. No surprises.
           </h2>
         </div>
 
-        <div className="mx-auto mt-12 max-w-lg">
-          <div className="overflow-hidden rounded-3xl border-2 border-forest-600 bg-ivory p-8 shadow-xl sm:p-10">
+        <div className="mx-auto max-w-lg">
+          <div className="overflow-hidden rounded-3xl bg-ivory p-8 shadow-2xl ring-1 ring-forest-400/10 sm:p-10">
             <p className="font-serif text-lg font-medium text-forest-400">
               The 7-Day Student Meal Plan
             </p>
@@ -47,12 +50,12 @@ export default function Pricing() {
             </p>
 
             <p className="mt-4 text-base leading-relaxed text-forest-500">
-              Seven days of meal ideas, organised shopping and practical kitchen guidance in one convenient plan.
+              21 recipes, an organised shopping list and practical kitchen guidance for your week.
             </p>
 
             <button
               onClick={goToCheckout}
-              className="btn-primary mt-8 w-full text-lg"
+              className="btn-primary btn-glow mt-8 w-full text-lg"
             >
               Get My Meal Plan — £3.99
               <ArrowRight size={20} />

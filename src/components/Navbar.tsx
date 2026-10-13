@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Menu, X, Leaf } from 'lucide-react'
 
 const navLinks = [
-  { label: 'How it works', href: '#how-it-works' },
+  { label: 'The product', href: '#showcase' },
   { label: "What's included", href: '#whats-included' },
   { label: 'Meal plan', href: '#meal-plan' },
   { label: 'FAQ', href: '#faq' },
@@ -52,7 +52,9 @@ export default function Navbar() {
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-forest-600 text-ivory">
             <Leaf size={18} />
           </span>
-          <span className="font-serif text-2xl font-bold tracking-tight text-forest-600">
+          <span className={`font-serif text-2xl font-bold tracking-tight transition-colors duration-300 ${
+            scrolled ? 'text-forest-600' : 'text-ivory'
+          }`}>
             MEALMATE
           </span>
         </a>
@@ -63,14 +65,18 @@ export default function Navbar() {
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}
-              className="text-sm font-medium text-forest-700 transition-colors hover:text-forest-400"
+              className={`text-sm font-medium transition-colors duration-300 ${
+                scrolled
+                  ? 'text-forest-700 hover:text-forest-400'
+                  : 'text-forest-100/80 hover:text-ivory'
+              }`}
             >
               {link.label}
             </button>
           ))}
           <button
             onClick={goToCheckout}
-            className="rounded-full bg-forest-600 px-6 py-2.5 text-sm font-semibold text-ivory transition-all duration-300 hover:bg-forest-500 hover:shadow-lg"
+            className="rounded-full bg-lime-accent px-6 py-2.5 text-sm font-semibold text-forest-700 transition-all duration-300 hover:bg-lime-accent-dark hover:shadow-lg"
           >
             Buy now — £3.99
           </button>
@@ -78,7 +84,9 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-full text-forest-600 lg:hidden"
+          className={`flex h-10 w-10 items-center justify-center rounded-full lg:hidden ${
+            scrolled ? 'text-forest-600' : 'text-ivory'
+          }`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
