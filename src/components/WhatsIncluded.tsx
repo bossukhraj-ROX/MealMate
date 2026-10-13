@@ -1,36 +1,36 @@
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import { BookOpen, Scale, ClipboardList, Recycle, RefreshCw, Download } from 'lucide-react'
+import { BookOpen, ClipboardList, Calculator, RefreshCw, Recycle, UtensilsCrossed } from 'lucide-react'
 
 const items = [
   {
     icon: BookOpen,
-    title: 'Simple recipes',
-    description: 'Step-by-step instructions for 21 meals, using techniques any beginner can follow.',
-  },
-  {
-    icon: Scale,
-    title: 'Exact quantities',
-    description: 'Every ingredient measured for one person, so you buy what you need and cook what you\'ll eat.',
+    title: '21 Recipes',
+    description: 'Breakfast, lunch and dinner ideas across seven days — with simple, step-by-step instructions.',
   },
   {
     icon: ClipboardList,
-    title: 'Organised shopping list',
-    description: 'One consolidated list grouped by supermarket aisle. One trip, nothing forgotten.',
+    title: 'Organised Shopping List',
+    description: 'Ingredients grouped by supermarket aisle, so you can shop in one efficient trip.',
   },
   {
-    icon: Recycle,
-    title: 'Ingredient reuse',
-    description: 'Meals are designed so ingredients carry across days. That bag of spinach gets used — all of it.',
+    icon: Calculator,
+    title: 'Quantity Calculator',
+    description: 'Adjust quantities for one to four people with a simple multiplier table.',
   },
   {
     icon: RefreshCw,
-    title: 'Substitution suggestions',
-    description: 'Vegetarian, dairy-free, gluten-free or nut-free — common swaps are flagged for every relevant meal.',
+    title: 'Substitution Guide',
+    description: 'Suggested alternatives for ingredients — vegetarian, dairy-free, gluten-free and more.',
   },
   {
-    icon: Download,
-    title: 'Instant download',
-    description: 'A beautifully formatted PDF you can view on any device, print, or keep on your phone.',
+    icon: Recycle,
+    title: 'Ingredient Reuse Guide',
+    description: 'See where ingredients can be reused across recipes to reduce waste and save money.',
+  },
+  {
+    icon: UtensilsCrossed,
+    title: 'Kitchen Essentials Checklist',
+    description: 'A practical list of useful kitchen equipment to have on hand.',
   },
 ]
 
@@ -55,13 +55,13 @@ export default function WhatsIncluded() {
               key={item.title}
               className="rounded-2xl border border-forest-100 bg-ivory p-7 transition-all duration-300 hover:border-forest-300 hover:shadow-lg"
             >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-forest-50 text-forest-500 transition-colors duration-300 group-hover:bg-forest-600 group-hover:text-ivory">
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-forest-50 text-forest-500">
                 <item.icon size={24} />
               </div>
-              <h3 className="font-serif text-xl font-semibold text-forest-700">
+              <h3 className="font-serif text-lg font-semibold text-forest-700">
                 {item.title}
               </h3>
-              <p className="mt-3 text-base leading-relaxed text-forest-500">
+              <p className="mt-2 text-sm leading-relaxed text-forest-500">
                 {item.description}
               </p>
             </div>

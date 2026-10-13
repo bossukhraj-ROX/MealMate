@@ -32,7 +32,7 @@ export default function FAQ() {
                 <span className="font-serif text-lg font-semibold text-forest-700">
                   {faq.q}
                 </span>
-                <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-forest-50 text-forest-500">
+                <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-forest-50 text-forest-500 transition-colors duration-300">
                   {openIndex === i ? <Minus size={18} /> : <Plus size={18} />}
                 </span>
               </button>

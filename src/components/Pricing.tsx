@@ -1,13 +1,13 @@
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import { ArrowRight, Check, Zap } from 'lucide-react'
+import { ArrowRight, Check } from 'lucide-react'
 
 const included = [
-  '21 recipes across 7 days',
-  'Organised shopping list',
-  'Exact quantities for one',
-  'Substitution suggestions',
+  '21 recipes — breakfast, lunch & dinner',
+  'Shopping list organised by aisle',
+  'Quantity calculator for 1–4 people',
+  'Substitution guide',
   'Ingredient reuse guide',
-  'Instant PDF download',
+  'Kitchen essentials checklist',
 ]
 
 export default function Pricing() {
@@ -33,33 +33,28 @@ export default function Pricing() {
         </div>
 
         <div className="mx-auto mt-12 max-w-lg">
-          <div className="relative overflow-hidden rounded-3xl border-2 border-forest-600 bg-ivory p-8 shadow-xl sm:p-10">
-            {/* Accent bar */}
-            <div className="absolute right-0 top-0 flex items-center gap-1.5 rounded-bl-2xl bg-forest-600 px-4 py-2">
-              <Zap size={14} className="text-lime-accent" />
-              <span className="text-xs font-semibold uppercase tracking-wider text-ivory">
-                Best value
-              </span>
-            </div>
-
+          <div className="overflow-hidden rounded-3xl border-2 border-forest-600 bg-ivory p-8 shadow-xl sm:p-10">
             <p className="font-serif text-lg font-medium text-forest-400">
               The 7-Day Student Meal Plan
             </p>
 
             <div className="mt-4 flex items-end gap-2">
               <span className="font-serif text-6xl font-bold text-forest-700">£3.99</span>
-              <span className="mb-2 text-base font-medium text-forest-400">one-off</span>
             </div>
 
-            <p className="mt-3 text-base text-forest-500">
-              No subscription. No account. No recurring charges. Pay once, download instantly.
+            <p className="mt-2 text-base font-medium text-forest-600">
+              One payment. No subscription.
+            </p>
+
+            <p className="mt-4 text-base leading-relaxed text-forest-500">
+              Seven days of meal ideas, organised shopping and practical kitchen guidance in one convenient plan.
             </p>
 
             <button
               onClick={goToCheckout}
               className="btn-primary mt-8 w-full text-lg"
             >
-              Get my meal plan — £3.99
+              Get My Meal Plan — £3.99
               <ArrowRight size={20} />
             </button>
 

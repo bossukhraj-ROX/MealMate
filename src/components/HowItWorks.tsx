@@ -5,20 +5,20 @@ const steps = [
   {
     number: '01',
     icon: CalendarDays,
-    title: 'Plan your week',
-    description: 'Open your meal plan and see every breakfast, lunch and dinner laid out for seven days. No decisions to make, no mental energy spent.',
+    title: 'Choose Your Meals',
+    description: 'Explore 21 recipes organised across seven days. Breakfast, lunch and dinner sorted — no daily decisions needed.',
   },
   {
     number: '02',
     icon: ShoppingCart,
-    title: 'Shop once',
-    description: 'Take the organised shopping list to any UK supermarket. Every ingredient is listed by aisle with exact quantities. One trip, done.',
+    title: 'Organise Your Shopping',
+    description: 'Use the aisle-organised shopping list to get everything in one trip. Exact quantities, nothing forgotten.',
   },
   {
     number: '03',
     icon: UtensilsCrossed,
-    title: 'Cook with confidence',
-    description: 'Follow simple, step-by-step recipes designed for basic kitchens and beginner cooks. Reuse ingredients smartly so nothing goes to waste.',
+    title: 'Get Cooking',
+    description: 'Follow simple recipes with quantity guidance, substitution options and ingredient reuse tips.',
   },
 ]
 
@@ -40,7 +40,6 @@ export default function HowItWorks() {
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
           {steps.map((step, index) => (
             <div key={step.number} className="relative">
-              {/* Connector line */}
               {index < steps.length - 1 && (
                 <div className="absolute left-1/2 top-16 -z-0 hidden h-0.5 w-full bg-forest-100 md:block" />
               )}
@@ -52,7 +51,7 @@ export default function HowItWorks() {
                 <span className="mt-5 font-serif text-sm font-semibold uppercase tracking-widest text-lime-accent-dark">
                   {step.number}
                 </span>
-                <h3 className="mt-2 font-serif text-2xl font-bold text-forest-700">
+                <h3 className="mt-2 font-serif text-xl font-bold text-forest-700">
                   {step.title}
                 </h3>
                 <p className="mt-3 max-w-xs text-base leading-relaxed text-forest-500">

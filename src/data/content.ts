@@ -66,35 +66,27 @@ export const mealPlan = [
 
 export const faqs = [
   {
-    q: 'What exactly do I get?',
-    a: 'A 7-day meal plan with breakfast, lunch and dinner for each day, recipes with step-by-step instructions, precise quantities for one person, a consolidated shopping list organised by supermarket aisle, ingredient reuse tips to cut waste, and substitution suggestions for common dietary needs.',
+    q: 'What is included in MealMate?',
+    a: 'A 7-day meal plan with breakfast, lunch and dinner for each day, 21 recipes with step-by-step instructions, an aisle-organised shopping list, a quantity calculator for one to four people, ingredient substitution and reuse guides, and a kitchen essentials checklist.',
   },
   {
-    q: 'How is it delivered?',
-    a: 'Instantly. After payment you receive a download link to a beautifully formatted PDF you can view on any device, print, or save to your phone.',
+    q: 'What do I receive after purchasing?',
+    a: 'Instantly after payment, you receive a download link for a beautifully formatted PDF. You can view it on any device, print it, or save it to your phone.',
   },
   {
-    q: 'Is this a subscription?',
+    q: 'Is it a subscription?',
     a: 'No. It is a single one-off payment of £3.99. There is no recurring charge, no account, and nothing to cancel.',
   },
   {
-    q: 'Do I need to be an experienced cook?',
-    a: 'Not at all. Every recipe uses basic techniques and simple ingredients. If you can boil water and follow a few steps, you can cook every meal in the plan.',
+    q: 'Can I adjust ingredient quantities?',
+    a: 'Yes. The plan includes a quantity calculator so you can scale every recipe from one to four people with a simple multiplier table.',
   },
   {
-    q: 'Can I adapt the meals to dietary preferences?',
-    a: 'Yes. The plan includes substitution suggestions for common swaps — vegetarian, dairy-free, gluten-free and nut-free alternatives are flagged where relevant.',
+    q: 'How does the shopping list work?',
+    a: 'Every ingredient across all 21 meals is consolidated into one list, grouped by supermarket aisle. Take it on your phone or print it out — one trip, nothing forgotten.',
   },
   {
-    q: 'How many people is the plan for?',
-    a: 'The quantities are calculated for one person, but the plan includes a simple multiplier table so you can scale up for two or more.',
-  },
-  {
-    q: 'Will I need lots of expensive ingredients?',
-    a: 'No. The plan is built around affordable, widely available ingredients you can find in any UK supermarket. Most meals reuse ingredients from earlier in the week, so nothing goes to waste.',
-  },
-  {
-    q: 'Can I get a refund?',
-    a: 'Because the product is a digital download, all sales are final. However, we are confident you will find it genuinely useful.',
+    q: 'Can I use the guide on my phone or print it?',
+    a: 'Yes. The PDF is designed to work on any screen — open it on your phone while shopping, view it on your laptop, or print a copy for your kitchen.',
   },
 ]

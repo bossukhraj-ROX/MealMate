@@ -7,9 +7,13 @@ export default function Hero() {
       window.location.href = link
     }
   }
+
+  const scrollTo = (id: string) => {
+    document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <section id="top" className="relative overflow-hidden bg-ivory pt-28 pb-16 lg:pt-40 lg:pb-24">
-      {/* Decorative background shapes */}
       <div className="pointer-events-none absolute top-0 right-0 -z-0 h-[500px] w-[500px] rounded-full bg-lime-accent/10 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 left-0 -z-0 h-[300px] w-[300px] rounded-full bg-forest-100/30 blur-3xl" />
 
@@ -28,7 +32,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-forest-500 sm:text-xl">
-            Seven days of simple meals, one organised shopping list and less money wasted on food.
+            Seven days of simple meals, 21 recipes and one organised shopping list. Plan what to eat, organise what you buy and make student cooking simpler.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -36,22 +40,18 @@ export default function Hero() {
               onClick={goToCheckout}
               className="btn-primary text-lg"
             >
-              Get my meal plan — £3.99
+              Get My Meal Plan — £3.99
               <ArrowRight size={20} />
             </button>
-            <a
-              href="#how-it-works"
-              onClick={(e) => {
-                e.preventDefault()
-                document.querySelector('#how-it-works')?.scrollIntoView({ behavior: 'smooth' })
-              }}
+            <button
+              onClick={() => scrollTo('#whats-included')}
               className="btn-secondary"
             >
-              How it works
-            </a>
+              See What&apos;s Included
+            </button>
           </div>
 
-          <div className="mt-8 flex items-center gap-6 text-sm text-forest-400">
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-forest-400">
             <span className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-lime-accent-dark" />
               One-off payment
@@ -77,14 +77,12 @@ export default function Hero() {
               loading="eager"
             />
           </div>
-          {/* Floating badge */}
           <div className="absolute -bottom-6 -left-4 rounded-2xl bg-forest-600 px-6 py-4 text-ivory shadow-xl sm:-left-6">
             <p className="font-serif text-3xl font-bold leading-none">7</p>
             <p className="mt-1 text-xs font-medium uppercase tracking-wider text-lime-accent">
               Days of meals
             </p>
           </div>
-          {/* Floating badge top-right */}
           <div className="absolute -top-4 -right-2 rounded-2xl bg-ivory px-5 py-3 shadow-xl border border-forest-100 sm:-right-6">
             <p className="font-serif text-2xl font-bold leading-none text-forest-600">£3.99</p>
             <p className="mt-1 text-xs font-medium uppercase tracking-wider text-forest-400">
